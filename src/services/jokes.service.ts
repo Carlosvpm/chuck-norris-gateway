@@ -1,13 +1,13 @@
 import { environment } from './../enviroments/environments';
 import { HttpService } from '@nestjs/axios';
 import { Injectable } from '@nestjs/common';
-import { Joke } from 'src/models/joke';
+
 import { lastValueFrom } from 'rxjs';
+import { Joke } from 'src/models/joke.model';
 
 @Injectable()
 export class JokesService {
   constructor(private http: HttpService) {}
-
 
   async getRandomJokeForCategory(category: string): Promise<Joke> {
     const response = await lastValueFrom(
