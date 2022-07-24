@@ -13,6 +13,15 @@ type Joke {
   value: String!
 }
 
+"""Free Text"""
+type FreeText {
+  total: Int!
+  result: [Joke!]!
+}
+
 type Query {
-  getRandomJokeForCategory: [Joke!]!
+  randomJoke: Joke!
+  randomJokeForCategory(category: String!): Joke!
+  categories: String!
+  freeText(text: String!): FreeText!
 }

@@ -11,15 +11,8 @@ import { JokesService } from 'src/services/jokes.service';
 export class JokesController {
   constructor(private jokesService: JokesService) {}
 
-
-  @Get('random')
-  async getRandomJokeForCategory(@Query('category') category: string) {
-    return await this.jokesService.getRandomJokeForCategory(category);
-  }
-
-
-  @Get('search')
-  async getTest(@Query('query') text: string) {
-    return await this.jokesService.getFreeText(text);
+  @Get('categories')
+  async getCategory() {
+    return await this.jokesService.getCategories();
   }
 }
