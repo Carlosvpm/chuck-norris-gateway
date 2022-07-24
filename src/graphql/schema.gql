@@ -22,6 +22,6 @@ type FreeText {
 type Query {
   randomJoke: Joke!
   randomJokeForCategory(category: String!): Joke!
-  categories: String!
+  categories: [String!]!
   freeText(text: String!): FreeText!
 }

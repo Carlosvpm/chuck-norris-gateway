@@ -20,7 +20,7 @@ export class JokeResolver {
     return await this.service.getRandomJokeForCategory(category);
   }
 
-  @Query(() => String)
+  @Query(() => [String])
   async categories(): Promise<string[]> {
     return await this.service.getCategories();
   }
