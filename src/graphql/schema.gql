@@ -1,0 +1,27 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+"""Joke """
+type Joke {
+  categories: [String!]!
+  created_at: String!
+  icon_url: String!
+  id: String!
+  updated_at: String!
+  url: String!
+  value: String!
+}
+
+"""Free Text"""
+type FreeText {
+  total: Int!
+  result: [Joke!]!
+}
+
+type Query {
+  randomJoke: Joke!
+  randomJokeForCategory(category: String!): Joke!
+  categories: [String!]!
+  freeText(text: String!): FreeText!
+}
