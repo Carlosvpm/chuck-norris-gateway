@@ -1,7 +1,6 @@
 import { Int } from '@nestjs/graphql';
 import { Field, ObjectType } from '@nestjs/graphql';
-import { ApiProperty } from '@nestjs/swagger';
-import { Joke } from './joke.model';
+import { Joke } from './Joke.model';
 
 @ObjectType({ description: 'Free Text' })
 export class FreeText {

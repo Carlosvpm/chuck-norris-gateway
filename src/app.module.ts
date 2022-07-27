@@ -4,7 +4,7 @@ import { Module } from '@nestjs/common';
 import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { join } from 'path';
-import { Joke } from './models/joke.model';
+import { Joke } from './models/Joke.model';
 
 @Module({
   imports: [

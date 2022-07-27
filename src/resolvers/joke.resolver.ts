@@ -1,5 +1,5 @@
-import { FreeText } from './../models/freeText.model';
-import { Joke } from 'src/models/joke.model';
+import { FreeText } from '../models/FreeText.model';
+import { Joke } from 'src/models/Joke.model';
 import { Get } from '@nestjs/common';
 import { Resolver, Query, Args } from '@nestjs/graphql';
 import { JokesService } from 'src/services/jokes.service';
@@ -27,7 +27,7 @@ export class JokeResolver {
 
   @Query(() => FreeText)
   async freeText(
-    @Args('text', { type: () => String }) text: string,
+    @Args('text') text: string,
   ): Promise<FreeText[]> {
     return await this.service.getFreeText(text);
   }

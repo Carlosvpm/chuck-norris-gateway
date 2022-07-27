@@ -1,10 +1,10 @@
-import { FreeText } from './../models/freeText.model';
+import { FreeText } from '../models/FreeText.model';
 import { environment } from './../enviroments/environments';
 import { HttpService } from '@nestjs/axios';
 import { Injectable } from '@nestjs/common';
 
 import { lastValueFrom } from 'rxjs';
-import { Joke } from 'src/models/joke.model';
+import { Joke } from 'src/models/Joke.model';
 
 @Injectable()
 export class JokesService {
