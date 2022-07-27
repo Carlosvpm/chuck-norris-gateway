@@ -1,5 +1,5 @@
 import { FreeText } from '../models/FreeText.model';
-import { environment } from './../enviroments/environments';
+import { environment } from '../environments/environments';
 import { HttpService } from '@nestjs/axios';
 import { Injectable } from '@nestjs/common';
 
