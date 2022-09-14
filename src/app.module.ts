@@ -1,10 +1,9 @@
-import { ResolversModule } from './resolvers/resolvers.module';
-import { ServicesModule } from './services/services.module';
 import { Module } from '@nestjs/common';
 import { GraphQLModule } from '@nestjs/graphql';
-import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
+import { ApolloDriver} from '@nestjs/apollo';
 import { join } from 'path';
-import { Joke } from './models/Joke.model';
+import { ServicesModule } from './services/services.module';
+import { ResolversModule } from './resolvers/resolvers.module';
 
 @Module({
   imports: [

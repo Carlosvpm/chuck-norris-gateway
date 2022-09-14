@@ -1,8 +1,7 @@
-import { FreeText } from '../models/FreeText.model';
-import { Joke } from 'src/models/Joke.model';
-import { Get } from '@nestjs/common';
+import { Joke } from 'src/models/joke';
 import { Resolver, Query, Args } from '@nestjs/graphql';
 import { JokesService } from 'src/services/jokes.service';
+import { FreeText } from 'src/models/freeText';
 
 @Resolver()
 export class JokeResolver {

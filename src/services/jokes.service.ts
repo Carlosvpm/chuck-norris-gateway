@@ -1,10 +1,9 @@
-import { FreeText } from '../models/FreeText.model';
-import { environment } from '../environments/environments';
+import { FreeText } from 'src/models/freeText';
+import { environment } from 'src/environments/environments';
 import { HttpService } from '@nestjs/axios';
 import { Injectable } from '@nestjs/common';
-
 import { lastValueFrom } from 'rxjs';
-import { Joke } from 'src/models/Joke.model';
+import { Joke } from 'src/models/joke';
 
 @Injectable()
 export class JokesService {
@@ -26,7 +25,7 @@ export class JokesService {
 
   async getFreeText(text: string): Promise<FreeText[]> {
     const response = await lastValueFrom(
-      this.http.get(`${environment.apiUrl}/search?query=${text}`),
+      this.http.get(`${environment.apiUrl}/search`, { params: { text } }),
     );
     return response.data;
   }

@@ -2,7 +2,7 @@ import { Field, ObjectType } from '@nestjs/graphql';
 import { ApiProperty } from '@nestjs/swagger';
 
 
-@ObjectType({ description: 'Joke ' })
+@ObjectType({ description: 'Joke' })
 export class Joke {
 
   @Field((type) => [String])
