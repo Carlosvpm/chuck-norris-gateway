@@ -4,11 +4,9 @@ import { Joke } from './joke';
 
 @ObjectType({ description: 'Free Text' })
 export class FreeText {
-
-  @Field((type) => Int)
+  @Field(() => Int)
   total: number;
 
-
-  @Field((type) => [Joke])
+  @Field(() => [Joke])
   result: Joke[];
 }

@@ -25,9 +25,7 @@ export class JokeResolver {
   }
 
   @Query(() => FreeText)
-  async freeText(
-    @Args('text') text: string,
-  ): Promise<FreeText[]> {
+  async freeText(@Args('text') text: string): Promise<FreeText[]> {
     return await this.service.getFreeText(text);
   }
 }

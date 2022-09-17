@@ -5,6 +5,6 @@ import { JokesService } from './jokes.service';
 @Module({
   imports: [HttpModule],
   providers: [JokesService],
-  exports: [JokesService]
+  exports: [JokesService],
 })
 export class ServicesModule {}
